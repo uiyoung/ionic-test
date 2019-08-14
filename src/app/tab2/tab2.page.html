@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Photo Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="cameraView()">cameraView</ion-button>
+  <ion-button (click)="getGPS()">GPS</ion-button>
+
+  <div *ngIf="geoLatitude">
+    <p>latitude : {{geoLatitude}}</p>
+    <p>longitutde : {{geoLongitude}}</p>
+    <p>accuracy : {{geoAccuracy}}</p>
+  </div>
+</ion-content>
